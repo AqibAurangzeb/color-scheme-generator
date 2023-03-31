@@ -33,6 +33,14 @@ h1 {
   margin: 0;
 }
 
+.input-color,
+.input-color-mode,
+.submit-btn,
+.color,
+.hexVal {
+  cursor: pointer;
+}
+
 .input-color {
   width: 51px;
   height: 34px;
@@ -52,7 +60,7 @@ h1 {
 .dropdown-arrow {
   -moz-appearance: none;
   -webkit-appearance: none;
-  background-image: url('images/down-arrow.png');
+  background-image: url('../images/down-arrow.png');
   background-repeat: no-repeat;
   background-position: right .7em top 50%, 0, 0;
 }
@@ -76,39 +84,40 @@ h1 {
 .card-bottom {
   display: grid;
   grid-template-rows: 414px 46px;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: "color1 color2 color3 color4 color5 color6"
-                       "hexVal1 hexVal2 hexVal3 hexVal4 hexVal5 hexVal6";
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "color1 color2 color3 color4 color5"
+                       "hexVal1 hexVal2 hexVal3 hexVal4 hexVal5";
+}
+
+.color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color:hover {
+  transition: 0.2s;
+  transform: scale(.97);
 }
 
 .color1 {
   grid-area: color1;
-  background: rgb(252, 207, 207);
 }
 
 .color2 {
   grid-area: color2;
-  background: rgb(247, 173, 173);
 }
 
 .color3 {
   grid-area: color3;
-  background: rgb(247, 125, 125);
 }
 
 .color4 {
   grid-area: color4;
-  background: rgb(255, 103, 103);
 }
 
 .color5 {
   grid-area: color5;
-  background: rgb(255, 63, 63);
-}
-
-.color6 {
-  grid-area: color6;
-  background: rgb(255, 33, 33);
 }
 
 .hexVal {

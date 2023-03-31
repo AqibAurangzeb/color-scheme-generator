@@ -5,15 +5,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-        <h1>Color Picker</h1>
+        <h1>Color Scheme Generator</h1>
         <div class="card">
             <div class="card-top">
-                <form>
-                    <input class="input-color" type="color" value="#F55A5A" aria-label="pick color">
-                    <select class="input-color-mode dropdown-arrow">
+                <form id="color-pick-form">
+                    <input class="input-color" id="input-color" name="input-color" type="color" value="#00b4d8" aria-label="pick color">
+                    <select class="input-color-mode dropdown-arrow" name="input-color-mode">
                         <option value="monochrome">Monochrome</option>
                         <option value="monochrome-dark">Monochrome-dark</option>
                         <option value="monochrome-light">Monochrome-light</option>
@@ -25,21 +25,8 @@
                     <button class="submit-btn">Get color scheme</button>
                 </form>
             </div>
-            <div class="card-bottom">
-                <div class="color1"></div>
-                <div class="hexVal">#FCCFCF</div>
-                <div class="color2"></div>
-                <div class="hexVal">#F7ADAD</div>
-                <div class="color3"></div>
-                <div class="hexVal">#F77D7D</div>
-                <div class="color4"></div>
-                <div class="hexVal">#FF6767</div>
-                <div class="color5"></div>
-                <div class="hexVal">#FF3F3F</div>
-                <div class="color6"></div>
-                <div class="hexVal">#FF2121</div>
-            </div>
+            <div class="card-bottom" id="card-bottom"></div>
         </div>
-        <script src="index.js"></script>
+        <script src="js/index.js" type="module"></script>
     </body>
 </html>
